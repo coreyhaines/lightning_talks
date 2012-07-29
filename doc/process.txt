@@ -100,6 +100,13 @@ Adding a lightning talk
   - still not creating
 - Add call to Talk.create
 
-
-
-
+Add mass assignment protection
+- model
+  attr_accessible :title, :vote_count, :as => :seed
+  attr_accessible :title
+- seed file add :as => :seed
+- show how it errors when adding vote_count as a query param through web inspector
+- controller do
+  include ActiveModel::MassAssignmentSecurity
+  Talk.create sanitize_for_mass_assignment(params[:talk], :default)
+- show how it doesn't error now, but doesn't accept it
