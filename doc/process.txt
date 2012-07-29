@@ -36,4 +36,24 @@ vote_count: rand(10)
 - Catch mass-assignment issue
 - Also need to flush talks at top of seed file
 
+Casting a vote
+- add a "LIKE" link to the view
+  - emphasize that we are 'creating' a vote
+- build a Votes controller
+- build create action
+- redirect back to index
+  - But this doesn't add a vote
+- add controller code to add a vote to the talk (talk.add_vote!)
+- add model method
+  - This still doesn't increment vote
+- add code in method to increment vote_count
+  - update_attribute :vote, self.vote + 1
+
+Discuss why not do update_attribute from controller
+  - hide mechanics of "voting" from controller
+  - encapsulate this knowledge inside the model
+  - controller doesn't need knowledge of database
+
+
+
 
