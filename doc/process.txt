@@ -1,0 +1,28 @@
+Go through discussion about where to start!
+
+Talks index
+
+Go to URL
+- build route
+- build controller
+- build action
+- build view
+
+Show talks
+- add iteration to view
+- add empty array as list of @talks to controller
+- add seed file with some talks
+- change empty array to Talk.all
+
+Decision point: What next?
+- Submit a talk
+- Vote on a talk
+
+Which adds value?
+Submit a talk - is there an alternate way to do it?
+Vote on a talk - direct feature making application more useful
+
+Which feature would allow us to get closer to using the application?
+Vote on a talk
+
+
