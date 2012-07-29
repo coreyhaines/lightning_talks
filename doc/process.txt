@@ -25,4 +25,15 @@ Vote on a talk - direct feature making application more useful
 Which feature would allow us to get closer to using the application?
 Vote on a talk
 
+Start with display of vote count
+- add to view
+- create a migration to add it
+rails g migration add_vote_count_to_talk vote_count:integer
+make default = 0
+- add to seed file
+vote_count: rand(10)
+
+- Catch mass-assignment issue
+- Also need to flush talks at top of seed file
+
 
