@@ -4,6 +4,7 @@ class TalksController < ApplicationController
   end
 
   def sorted
+    @talks = Talk.sorted_by_vote_count
     render :index
   end
 end
