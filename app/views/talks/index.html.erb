@@ -3,6 +3,7 @@
 <div class='talks'>
 <% @talks.each do |talk| %>
   <div class='talk'>
+    <%= link_to "LIKE", talk_votes_url(talk), method: "post" %>
     <div class='votes'><%=talk.vote_count%></div>
     <div class='title'><%=talk.title%></div>
   </div>
