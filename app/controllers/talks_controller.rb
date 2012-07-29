@@ -13,6 +13,7 @@ class TalksController < ApplicationController
   end
 
   def create
+    Talk.create params[:talk]
     redirect_to talks_url
   end
 end
