@@ -14,7 +14,7 @@ Show talks
 - add seed file with some talks
 - change empty array to Talk.all
 
-Decision point: What next?
+Decision Point: What Next?
 - Submit a talk
 - Vote on a talk
 
@@ -55,5 +55,14 @@ Discuss why not do update_attribute from controller
   - controller doesn't need knowledge of database
 
 
+Decision Point: What Next?
+- Sort view by votes
+- Add a lightning talk
 
+Sorting view gives us more value, as it takes us to the point of actually being able to use it for something.
+Worth discussing with customer whether this is something that is wanted, as it might influence voting.
+Notice that we are very quickly getting to discussion points. Choice of starting point leads to this answering of questions.
+
+Discussion with customer leads us to not wanting to sort view by votes on index page, but want a page that can be used for the actual event that does have it sorted
+URL: /talks/sorted
 
