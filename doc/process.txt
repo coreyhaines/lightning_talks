@@ -87,4 +87,19 @@ Possible next steps:
 Adding a lightning talk gets us closer to having the site be useful. While multiple events would be nice, we could spin up different instances per event. Adding a lightning talk via email and a manual process is no fun.
 
 
+Adding a lightning talk
+- Add a link to index page
+- Add route to talks resource :new
+- Add new action to talks controller
+- Add new template
+- Add form to template
+- Add creation of new talk to new action
+- Add route for create
+- Add create action to controller
+- Redirect to index
+  - still not creating
+- Add call to Talk.create
+
+
+
 
