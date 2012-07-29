@@ -1,1 +1,6 @@
+<h1>Submit a Lightning Talk</h1>
 
+<%= form_for @talk do |f| %>
+  <%= f.text_field :title %>
+  <%= f.submit "Submit Lightning Talk" %>
+<% end %>
