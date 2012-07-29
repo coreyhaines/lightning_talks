@@ -4,5 +4,6 @@ class TalksController < ApplicationController
   end
 
   def sorted
+    render :index
   end
 end
