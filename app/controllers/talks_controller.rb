@@ -1,5 +1,5 @@
 class TalksController < ApplicationController
   def index
-    @talks = []
+    @talks = Talk.all
   end
 end
