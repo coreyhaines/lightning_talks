@@ -1,5 +1,6 @@
 class Talk < ActiveRecord::Base
-  attr_accessible :title, :vote_count
+  attr_accessible :title, :vote_count, :as => :seed
+  attr_accessible :title
 
   scope :sorted_by_vote_count, order("vote_count DESC")
 

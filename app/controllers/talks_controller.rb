@@ -1,4 +1,5 @@
 class TalksController < ApplicationController
+  include ActiveModel::MassAssignmentSecurity
   def index
     @talks = Talk.all
   end
@@ -13,7 +14,7 @@ class TalksController < ApplicationController
   end
 
   def create
-    Talk.create params[:talk]
+    Talk.create sanitize_for_mass_assignment(params[:talk], :default)
     redirect_to talks_url
   end
 end
