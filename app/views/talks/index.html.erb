@@ -3,6 +3,7 @@
 <div class='talks'>
 <% @talks.each do |talk| %>
   <div class='talk'>
+    <div class='votes'><%=talk.vote_count%></div>
     <div class='title'><%=talk.title%></div>
   </div>
 <% end %>
