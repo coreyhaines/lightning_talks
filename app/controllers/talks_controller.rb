@@ -9,5 +9,6 @@ class TalksController < ApplicationController
   end
 
   def new
+    @talk = Talk.new
   end
 end
