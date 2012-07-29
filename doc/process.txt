@@ -76,3 +76,15 @@ Creating sorted view
 
 Notice that there is no good link to move between them. Add link back to index.
 
+Decision Point: What Next?
+We now have enough (minus the styling) for this to be used at an event. If we have people submit the lightning talks by email, and we put them into the database. Not the best, but it would do if needed.
+True, it would be nice to limit votes by ip address or something, but that is complexity we aren't focused on with this.
+
+Possible next steps:
+- Add a lightning talk
+- Add a new event
+
+Adding a lightning talk gets us closer to having the site be useful. While multiple events would be nice, we could spin up different instances per event. Adding a lightning talk via email and a manual process is no fun.
+
+
+
