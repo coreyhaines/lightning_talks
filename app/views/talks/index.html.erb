@@ -1,1 +1,10 @@
-All my talks!
+<h1>Lightning Talks</h1>
+
+<div class='talks'>
+<% @talks.each do |talk| %>
+  <div class='talk'>
+    <div class='title'><%=talk.title%></div>
+  </div>
+<% end %>
+</div>
+
