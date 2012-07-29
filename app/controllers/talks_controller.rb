@@ -11,4 +11,7 @@ class TalksController < ApplicationController
   def new
     @talk = Talk.new
   end
+
+  def create
+  end
 end
