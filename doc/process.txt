@@ -66,3 +66,13 @@ Notice that we are very quickly getting to discussion points. Choice of starting
 Discussion with customer leads us to not wanting to sort view by votes on index page, but want a page that can be used for the actual event that does have it sorted
 URL: /talks/sorted
 
+Creating sorted view
+- add link to index
+- add route to talks collection
+- add action to talks controller
+- render index action
+- add call to Talk.sorted_by_vote_count
+- add scope sorted_by_vote_count -  scope :sorted_by_vote_count, order("vote_count DESC")
+
+Notice that there is no good link to move between them. Add link back to index.
+
