@@ -1,5 +1,5 @@
 LightningTalks::Application.routes.draw do
-  resources :talks, only: [:index] do
+  resources :talks, only: [:index, :new] do
     collection do
       get :sorted
     end
