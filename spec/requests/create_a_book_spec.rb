@@ -6,6 +6,11 @@ feature "Creating new book" do
   end
 
   example "Text fields exist in Create New Book pages" do 
+    visit "/books/new"
+
+    fill_in "Title", :with => "Book 1"
+    fill_in "Author", :with => "Author 1"
+    click_button "Create New Book"
   end
 
   example "Create New Book will redirect us to Books page" do
