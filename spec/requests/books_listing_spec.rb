@@ -1,10 +1,15 @@
 require 'spec_helper'
 
-feature "Viewing the list of talks" do
-  example "Route to /books exist"
-  example "One book shows up on page"
-  example "Three books all show up on the page"
-  example "There is a Vote button"
-  example "There is a link to Sorted Books"
-  example "There is a link to Create a new Book"
+feature "Viewing the list of books" do
+  example "No books should show empty page" do
+    visit "/books"
+
+    all(".book").should be_empty
+  end
+  
+  example "One book will show on the books listing page" do
+    Book.create title: "Book 1", author: "Author 1"
+    visit "/books"
+    page.should have_css(".book", text: "Book 1")
+  end
 end

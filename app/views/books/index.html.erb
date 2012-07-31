@@ -1,0 +1,11 @@
+<h1> Books Listing </h1>
+
+<hr/>
+<div class='books'>
+  <% @books.each do |book| %>
+  <div class='book' id="book_<%= book.id %>">
+    <%= link_to "Vote", book_votes_path(book), :method => :post %>
+    <%= book.title %> by <%= book.author %>
+  </div>
+  <% end %>
+</div>
