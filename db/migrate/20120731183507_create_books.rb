@@ -4,6 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.integer :votes
+      :default => 0 
 
       t.timestamps
     end

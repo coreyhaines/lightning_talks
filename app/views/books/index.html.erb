@@ -1,11 +1,14 @@
 <h1> Books Listing </h1>
 
+<%= link_to "Sorted Books", sorted_books_path %>
 <hr/>
 <div class='books'>
   <% @books.each do |book| %>
-  <div class='book' id="book_<%= #{book.id} %>">
-    <%= link_to "Vote", book_votes_path(book), :method => :post %>
-    <%= book.title %> by <%= book.author %>
+  <div class='book' id="book_<%= book.id %>">
+    <li><%= link_to "Vote", book_votes_path(book), :method => :post %>
+    <%= book.title %> by <%= book.author %></li>
   </div>
   <% end %>
 </div>
+<hr/>
+<%= link_to "Create a New Book", new_book_path %>

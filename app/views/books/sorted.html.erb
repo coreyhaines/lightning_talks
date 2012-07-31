@@ -1,0 +1,10 @@
+<h1> Sorted Books </h1>
+
+<hr/>
+<div class='books'>
+  <% @books.each do |book| %>
+  <div class='book' id="book_<%= book.id %>">
+    <li>(<%= book.votes %>) <%= book.title %> by <%= book.author %></li>
+  </div>
+  <% end %>
+</div>
