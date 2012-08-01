@@ -28,7 +28,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create params[:task]
+    task = Task.create params[:task]
+    task.goal_id = @goal.id
+    task.save!
     redirect_to goal_tasks_path(@goal)
   end
 

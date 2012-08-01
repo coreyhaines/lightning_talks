@@ -12,7 +12,7 @@ describe "Creating a task" do
     click_button "Create Task"
 
     task = Task.find_by_name("sleep")
-    rtask = find(".task#task_#{task.id}")
+    rtask = find("#task_#{task.id}")
 
     rtask.text.should =~ /sleep/
     rtask.text.should =~ /ZZZzzz/
