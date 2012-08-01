@@ -4,6 +4,11 @@
 <ul>
   <% @tasks.each do |task| %>
     <li class=task id=task_<%=task.id%> >
-    <%= task.name %>
+    <% if task.started %>
+      <%= link_to "Complete", complete_goal_task_path(@goal, task), :method => :put %>
+    <% else %>
+      <%= link_to "Start", start_goal_task_path(@goal, task), :method => :put %>
+    <% end %>
+    <%= task.name %> - <%= task.description %> - <%= task.person %>
   <%end%>
 </ul>
