@@ -1,18 +1,40 @@
 <h1>Task List</h1>
 <hr />
 
+<% if @new_tasks.length > 0%>
+<h2>Not Started</h2>
 <ul>
-  <% @tasks.each do |task| %>
+  <% @new_tasks.each do |task| %>
     <li class=task id=task_<%=task.id%> >
-    <% if task.started %>
-      <%= link_to "Complete", complete_goal_task_path(@goal, task), :method => :put %>
-    <% else %>
-      <%= link_to "Start", start_goal_task_path(@goal, task), :method => :put %>
-    <% end %>
+    <%= link_to "Start", start_goal_task_path(@goal, task), :method => :put %>
     <%= task.name %> - <%= task.description %> - <%= task.person %>
   <%end%>
 </ul>
-
 <hr />
+<% end %>
+
+<% if @started_tasks.length > 0 %>
+<h2>Started Tasks</h2>
+<ul>
+  <% @started_tasks.each do |task| %>
+    <li class=started id=started_<%=task.id%> >
+    <%= link_to "Complete", complete_goal_task_path(@goal, task), :method => :put %>
+    <%= task.name %> - <%= task.description %> - <%= task.person %>
+  <%end%>
+</ul>
+<hr />
+<% end %>
+
+<% if @completed_tasks.length > 0 %>
+<h2>Completed Tasks</h2>
+<ul>
+  <% @completed_tasks.each do |task| %>
+    <li class=completed id=completed_<%=task.id%> >
+    <%= task.name %> - <%= task.description %> - <%= task.person %>
+  <%end%>
+</ul>
+<hr />
+<% end %>
+
 
 <%= link_to "Add task", new_goal_task_path(@goal) %>

@@ -13,15 +13,17 @@ describe "List of Tasks" do
   end
 
   example "one task shows up" do
-    task = Task.create name: "work"
     goal = prep
+    task = Task.create name: "work", goal: goal
+    visit "/goals/#{goal.id}/tasks"
     find("#task_#{task.id}").text.should =~ /work/
   end
 
   example "all tasks show up" do
-    task1 = Task.create name: "fake"
-    task2 = Task.create name: "names"
     goal = prep
+    task1 = Task.create name: "fake", goal: goal
+    task2 = Task.create name: "names", goal: goal
+    visit "/goals/#{goal.id}/tasks"
     find("#task_#{task1.id}").text.should =~ /fake/
     find("#task_#{task2.id}").text.should =~ /names/
   end

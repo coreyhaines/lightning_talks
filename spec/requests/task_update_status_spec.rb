@@ -22,7 +22,7 @@ describe "Change task status" do
     example "Clicking the completed link marks task as completed" do
       task = Task.create name: "wealth", started: true
       goal = prep
-      within(".task#task_#{task.id}") do
+      within(".started#started_#{task.id}") do
         click_link "Complete"
       end
       task.reload

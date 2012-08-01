@@ -12,7 +12,6 @@ describe "Creating a task" do
     click_button "Create Task"
 
     task = Task.find_by_name("sleep")
-    p Task.all
     rtask = find(".task#task_#{task.id}")
 
     rtask.text.should =~ /sleep/

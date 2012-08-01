@@ -6,7 +6,9 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = Task.all
+    @new_tasks = @goal.new_tasks
+    @started_tasks = @goal.started_tasks
+    @completed_tasks = @goal.completed_tasks
   end
 
   def start
