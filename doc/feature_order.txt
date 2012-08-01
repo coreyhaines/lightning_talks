@@ -1,13 +1,17 @@
 Breakdown of Features for Project Management Tool
 =================================================
 
-Project page shows all Goals (completed and uncompleted)
-    - has 2 links: completed goals, uncompleted goals
-    - lists all goals grouped by status
-    - each goal has a link to its tasks
-Goal page shows all Tasks (completed and uncompleted)
+View list of tasks
     - has 2 links: completed tasks, uncompleted tasks
-    - lists all tasks grouped by status
-    - each task has assignee, description, and status
-        - each task has a check button/link to change status
-    - has link back to project page
+Interact with tasks - start/complete
+Create a task
+    - assignee, description, status
+Group tasks
+View list of completed/uncompleted tasks
+
+View list of goals
+    - has 2 links: completed goals, uncompleted goals
+Interact with goals - complete or not
+Create a goal
+Group goals
+View list of completed/uncompleted goals
