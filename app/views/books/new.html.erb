@@ -1,12 +1,13 @@
-<h1> Create a New Book </h1>
+<h1> Create New Book </h1>
 
 <div class='form'>
-<%= form_for  do |f| %>
+<%= form_for [@theme, @book] do |f| %>
     <%= f.label :title %>
-    <%= f.textfield :title %>
+    <%= f.text_field :title %>
     <br>
     <%= f.label :author %>
-    <%= f.textfield :author %>
+    <%= f.text_field :author %>
     <br>
+    <%= f.submit "Submit New Book" %>
 <% end %>
 </div>

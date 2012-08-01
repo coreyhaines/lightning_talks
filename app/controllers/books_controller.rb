@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+    @theme = Theme.find(params[:theme_id])
     @books = Book.all
   end
 
@@ -8,12 +9,13 @@ class BooksController < ApplicationController
   end
 
   def new
-    @books = Book.new
+    @theme = Theme.find(params[:theme_id])
+    @book = Book.new
   end
   
   def create
-    @books = Book.create(params[:book])
-    redirect_to books_url
+    @book = Book.create(params[:book])
+    redirect_to theme_books_url
   end
 
 end

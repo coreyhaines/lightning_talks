@@ -2,7 +2,8 @@ require 'spec_helper'
 
 feature "Viewing the books sorted by vote count" do
   example "no books about an empty sorted page" do
-    visit "/books/sorted"  
+    theme = Theme.create title: "Theme 1"
+    visit "/themes/#{theme.id}/books/sorted"   
     all(".book").should be_empty
   end
 
@@ -12,7 +13,8 @@ feature "Viewing the books sorted by vote count" do
     book3 = Book.create title: "Book 3", author: "Author 1", votes: 4
     book4 = Book.create title: "Book 4", author: "Author 1", votes: 2
     
-    visit "/books/sorted"
+    theme = Theme.create title: "Theme 1"
+    visit "/themes/#{theme.id}/books/sorted"   
   
     books_all = all(".book")
     books_all[0]["id"].should == "book_#{book3.id}"
