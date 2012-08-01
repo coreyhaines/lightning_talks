@@ -30,4 +30,24 @@ As features are completed, please commit the code and tests into source control 
 
 
 
+Setup steps
+Create a branch with your name
+git branch corey
+git checkout corey
+git push origin corey
+
+When you finish a feature
+git commit -am "Finished feature: <feature description>"
+git push origin corey
+
+First step:
+Create a file in doc/feature_order.txt
+Commit this to your branch
+Fill in the file with the breakdown of features
+Commit this to your branch
+Order the features by how you are going to work on them
+Commit this to your branch
+git push origin corey
+
+
 
