@@ -1,0 +1,22 @@
+<h1> List of Tasks </h1>
+
+<%= link_to "Completed Tasks", completed_goal_tasks_path %>
+<%= link_to "Uncompleted Tasks", uncompleted_goal_tasks_path %>
+<hr/>
+<div class='tasks uncompleted'>
+<%= @uncompleted_tasks.each do |task| %>
+  <div class='task' id="task_<%= task.id %>">
+  (<%= task.status %>) <%= task.description %> by <%= task.assignee %>
+  </div>
+<% end %>
+</div>
+
+<div class='tasks completed'>
+<%= @completed_tasks.each do |task| %>
+  <div class='task' id="task_<%= task.id %>">
+  (<%= task.status %>) <%= task.description %> by <%= task.assignee %>
+  </div>
+<% end %>
+</div>
+<hr/>
+<%= link_to "Create New Task", new_goal_task_path %>

@@ -1,0 +1,20 @@
+<h1> List of goals </h1>
+
+<%= link_to "Completed Goals", completed_goals_path %>
+<%= link_to "Uncompleted Goals", uncompleted_goals_path %>
+<hr/>
+<div class='goals uncompleted'>
+<%= @uncompleted_goals.each do |goal| %>
+  <div class='goal' id="goal_<%= goal.id %>">
+  (<%= goal.status %>) <%= goal.description %>
+  </div>
+<% end %>
+</div>
+
+<div class='goals completed'>
+<%= @completed_goals.each do |goal| %>
+  <div class='goal' id="goal_<%= goal.id %>">
+  (<%= goal.status %>) <%= goal.description %>
+  </div>
+<% end %>
+</div>

@@ -1,8 +1,8 @@
 Breakdown of Features for Project Management Tool
 =================================================
 
-View list of tasks
-    - has 2 links: completed tasks, uncompleted tasks
+#View list of tasks
+#    - has 2 links: completed tasks, uncompleted tasks
 Interact with tasks - start/complete
 Create a task
     - assignee, description, status

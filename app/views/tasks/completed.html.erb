@@ -1,0 +1,11 @@
+<h1> Completed Tasks </h1>
+
+<%= link_to "All Tasks", goal_tasks_path %>
+<hr/>
+<div class='tasks'>
+<%= @tasks.each do |task| %>
+  <div class='task' id="task_id<%= task.id %>">
+  <%= task.description %> by <%= task.assignee %>
+  </div>
+<% end %>
+</div>
