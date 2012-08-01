@@ -12,3 +12,7 @@
     <%= task.name %> - <%= task.description %> - <%= task.person %>
   <%end%>
 </ul>
+
+<hr />
+
+<%= link_to "Add task", new_goal_task_path(@goal) %>

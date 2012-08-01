@@ -14,5 +14,13 @@ describe TasksController do
     it "routes to #complete" do
       put("/goals/1/tasks/2/complete").should route_to("tasks#complete", :goal_id => "1", :id => "2")
     end
+
+    it "routes to #new" do
+      get("/goals/1/tasks/new").should route_to("tasks#new", :goal_id => "1")
+    end
+
+    it "routes to #create" do
+      post("/goals/1/tasks").should route_to("tasks#create", :goal_id => "1")
+    end
   end
 end
