@@ -1,16 +1,18 @@
 Feature Order
 
+view a list of tasks
+mark tasks as completed
+mark tasks as started
+cud tasks
 
 view a list of goals
-view a list of tasks within that goal
 mark tasks as completed
 mark a task as started
 mark a goal as completed when all the tasks are completed
-cud tasks
 cud goals
 
 view uncompleted tasks
-viw completed tasks
+view completed tasks
 
 view uncompleted goals
 view completed goals
