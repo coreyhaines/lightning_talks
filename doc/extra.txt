@@ -1,0 +1,11 @@
+Enhancements to the project tool
+
+With the raging success of the project management tool, we want to roll it out to the company as a whole. We need some features added.
+
+Support for multiple projects
+We will want goals to be associated to a project
+We can add a start date to a project
+We can add a start date for a goal
+Once at least one task is completed, an estimated completion date for the goal should be calculated based on the average time for each task
+Once an estimate for a goal is completed, an estimated completion date for the project should be calculated
+

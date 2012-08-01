@@ -1,0 +1,33 @@
+Project Management Tool
+
+Managing projects is a fundamental aspect of any large company. Having a streamlined tool for doing this is essential for success in project delivery. We have a dire need for this functionality, so we would like to develop it in a manner that will allow us to start using it as quickly as possible, even if all features are not completed. By providing a useful product rapidly, we can then provide feedback on the direction and prioritization of features. We are interested in piloting it on a very small project with a limited set of tasks to completion. We will then roll it out to more complicated projects.
+
+
+Desired Core Features
+
+The project consist of goals
+A goal consists of tasks
+A task has a description and an assigned person
+When a task can be marked as started
+A task can be marked as completed
+If all tasks for a goal are marked completed, then the goal is marked as complete
+If all goals are marked complete, then the project is considered delivered
+
+Views
+Provide a view of all goals, grouped by completed status
+Provide a view of all completed goals
+Provide a view of all uncompleted goals
+For a goal, provide a view of all uncompleted tasks
+For a goal, provide a view of all completed tasks
+For a goal, provide a view of all tasks, grouped by completed status
+
+
+Notes
+
+We would like to have an idea of a roll out schedule, so please provide a list outlining the order in which you will be delivering features.
+We will be moving maintenance to a different team, so it is essential that your test suite works as a reasonable documentation set for understanding the features.
+As features are completed, please commit the code and tests into source control and push your branch for review
+
+
+
+
