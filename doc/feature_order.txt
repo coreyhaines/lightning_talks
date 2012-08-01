@@ -1,0 +1,12 @@
+Order:
+View all goals, grouped by completed status
+For a goal, provide a view of all tasks, grouped by completed status
+Mark a task as started
+Mark a task as completed
+Create a task
+Goals are automatically marked as complete when all tasks are complete
+For a goal, provide a view of all uncompleted tasks
+For a goal, provide a view of all completed tasks
+Provide a view of all completed goals
+Provide a view of all uncompleted goals
+Create a goal
