@@ -1,0 +1,25 @@
+Feature Order
+
+view a list of tasks
+mark tasks as completed
+mark tasks as started
+cud tasks
+
+view a list of goals
+mark tasks as completed
+mark a task as started
+mark a goal as completed when all the tasks are completed
+cud goals
+
+view uncompleted tasks
+view completed tasks
+
+view uncompleted goals
+view completed goals
+
+view all tasks grouped by completed status
+view all goals grouped by completed status
+
+view a list of projects
+mark projects as complete when all goals are marked as complete
+cud a project
