@@ -1,18 +1,22 @@
 class TasksController < ApplicationController
+  before_filter :get_goal
+
   def index
-    @tasks = Task.all
+    @tasks = @goal.tasks
   end
+
   def completed
     task = Task.find(params[:task_id])
     task.status = "completed"
     task.save
-    redirect_to tasks_url
+    redirect_to goal_tasks_url(@goal)
   end
+
   def started
     task = Task.find(params[:task_id])
     task.status = "started"
     task.save
-    redirect_to tasks_url
+    redirect_to goal_tasks_url(@goal)
   end
 
   def new
@@ -20,8 +24,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create params[:task]
-    redirect_to tasks_url
+    @task = @goal.tasks.create params[:task]
+    redirect_to goal_tasks_url(@goal)
   end
 
   def edit
@@ -31,11 +35,16 @@ class TasksController < ApplicationController
   def update
     @task = Task.find params[:id]
     @task.update_attributes params[:task]
-    redirect_to tasks_url
+    redirect_to goal_tasks_url(@goal)
   end
 
   def destroy
     Task.find(params[:id]).destroy
-    redirect_to tasks_url
+    redirect_to goal_tasks_url(@goal)
+  end
+
+  private
+  def get_goal
+    @goal = Goal.find(params[:goal_id])
   end
 end

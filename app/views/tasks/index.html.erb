@@ -1,6 +1,12 @@
-<h1>Tasks Bitch!</h1>
+<h1>Tasks for <%= @goal.name %>, Bitch!</h1>
 <ul>
 <% @tasks.each do |task| %>
-  <li id="task_<%= task.id %>"><%= task.name %> <%= link_to 'Mark as Completed', task_completed_path(task) if task.status != 'completed' %> <%= link_to 'Mark as Started', task_started_path(task) if task.status != 'started' %> <%= link_to 'Delete', task_path(task), :method => :delete %> </li>
+  <li id="task_<%= task.id %>">
+    <%= task.name %>
+    <%= link_to 'Mark as Completed', goal_task_completed_path(@goal, task) if task.status != 'completed' %>
+    <%= link_to 'Mark as Started', goal_task_started_path(@goal, task) if task.status != 'started' %>
+    <%= link_to 'Edit', edit_goal_task_path(@goal, task) %>
+    <%= link_to 'Delete', goal_task_path(@goal, task), :method => :delete %>
+  </li>
 <% end %>
 </ul>
